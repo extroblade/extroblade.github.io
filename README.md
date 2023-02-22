@@ -8,4 +8,4 @@ https://extroblade.github.io/
 
 ---
 
-[CONQUEST](https://extroblade.github.io/comquest-layout)
+[CONQUEST](https://extroblade.github.io/conquest-layout)

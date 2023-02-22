@@ -1,5 +1,0 @@
-# CONQUEST layout
-
----
-
-Adaptive, SASS
