@@ -4,8 +4,8 @@ https://extroblade.github.io/
 
 ---
 
-[BEAUTY](/beauty-layout)
+[BEAUTY](https://extroblade.github.io/beauty-layout)
 
 ---
 
-[CONQUEST](/comquest-layout)
+[CONQUEST](https://extroblade.github.io/comquest-layout)
