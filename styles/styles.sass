@@ -1,0 +1,692 @@
+
+    
+//-----------------vars------------------
+    
+    
+$accent: #D4B098
+$gray: #FDFDFB
+$dark: #444240
+$transparent: rgba(0, 0, 0, 0)
+$gradient: linear-gradient(90deg, $transparent  , #EAE3D4)
+
+
+
+//-----------------commons------------------
+    
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    width: auto
+    max-width: 100%
+
+
+body
+    font-family: 'Roboto', sans-serif
+    font-style: normal
+    font-size: 10px
+    background-color: $gray
+    
+    
+.ellipse
+    position: absolute
+    bottom: 2vw
+    left: 35vw
+    display: flex
+    width: 450px
+    aspect-ratio: 0.5
+    z-index: -100
+    border-radius: 100% 0 0 100% / 50% 0 0 50%
+    background: linear-gradient(270deg, $transparent  , #EAE3D4)
+
+.ring
+
+
+.ellipse-border
+    background: linear-gradient(white, white) padding-box, $gradient  border-box
+    border-radius: 50%
+    aspect-ratio: 1
+    border: 1px solid transparent
+
+h3
+    font-weight: 400
+    font-size: 32px
+    line-height: 43px
+
+
+h2
+    font-weight: 400
+    font-size: 4.5em
+    line-height: 60px
+
+p
+    font-family: 'Roboto', sans-serif
+
+
+.link
+    white-space: nowrap
+    text-decoration: none
+    color: $dark
+    font-weight: 400
+    line-height: 16px
+    font-family: 'Playfair Display', sans-serif
+
+    &__logo
+        font-family: 'Playfair Display', sans-serif
+        text-decoration: none
+        color: $dark
+
+
+.btn
+    cursor: pointer
+    font-family: 'Roboto', sans-serif
+    text-decoration: none 
+    white-space: nowrap
+    min-width: 205px
+    padding: 26px 38px
+    text-align: center
+    color: #ffffff
+    font-weight: 500
+    font-size: 12px
+    line-height: 14px
+    letter-spacing: 0.05em
+    text-transform: uppercase
+
+//-----------------header------------------
+
+.header
+    background-color: $gray
+    position: relative
+    z-index: 100
+    padding: 0 100px
+    
+    &__logo 
+        display: flex
+        flex-direction: row
+        align-items: center
+        text-transform: uppercase
+        font-weight: 400
+        font-size: 12px
+        line-height: 16px
+        letter-spacing: 0.14em
+    &__links
+        ul
+            list-style-type: none
+            display: flex
+            flex-direction: row
+            text-align: center
+        .link
+            margin: 10px
+
+
+    &__btns
+        width: 100px
+        display: flex
+        justify-content: center
+        align-items: center
+        text-decoration: none
+        color: $dark
+        .circle
+            position: relative
+            display: flex
+            margin-left: -10px
+            bottom: 6px
+            left: 27px
+            align-items: center
+            justify-content: center
+            font-family: 'Roboto', sans-serif
+            border-radius: 50%
+            width: 12px
+            height: 12px
+            background-color: $accent
+
+            
+.nav
+    min-height: 85px
+    display: flex
+    flex-direction: row
+    justify-content: space-between 
+    align-items: center
+    .link
+       font-size: 14px
+
+
+@media (max-width: 1200px)
+    .header
+        padding: 0 80px
+    .nav
+        margin-bottom: 100px
+
+@media (max-width: 992px)
+    .header
+        padding: 0 40px
+
+@media (max-width: 767px)
+    .nav
+        margin-bottom: 10px
+        padding: 0 20px
+        flex-direction: column
+    .header
+        padding: 0 10px
+        &__logo 
+            margin: 20px 0
+            font-size: 2em
+            display: flex
+            flex-direction: row
+            align-items: center
+        &__links ul
+            flex-direction: column
+            li
+                margin: 10px
+        &__btns
+            margin: 20px 0 
+            width: 100px
+            display: flex
+            
+
+
+
+//-----------------main------------------
+
+
+main
+    font-family: 'Playfair Display', serif
+
+
+//----------------first-screen----------------
+
+
+.first-screen
+    margin: 0 185px
+    font-size: 10px
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-direction: row
+    .btn
+        background-color: $dark
+    .img
+        width: 50%
+    article
+        margin-bottom: 60px
+        white-space: nowrap
+        .line
+            position: relative
+            right: 80px
+            top: 30px
+        p
+            white-space: normal
+            display: flex
+            max-width: 260px
+            font-family: 'Roboto', sans-serif
+            margin-bottom: 64px
+            font-weight: 300
+            font-size: 14px
+            line-height: 21px
+    .line
+        width: 50px
+        margin: 0 10px
+        height: 0px
+        border: 0.5px solid #8B8371
+
+.frame
+    p
+        white-space: nowrap
+    display: flex
+    flex-direction: row
+
+    &__line
+        position: relative
+        z-index: -1
+        display: flex
+        flex-direction: row
+        font-weight: 400
+        font-size: 16px
+        line-height: 22px
+        &.first
+            bottom: 180px
+            left: 10px
+            &__inner
+                align-items: center
+            
+        &.second
+            top: 180px
+            right: 10px
+            &__inner
+                align-items: center
+            
+        
+.first__header
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+
+@media (max-width: 1200px)
+    .first-screen
+        &__line
+            position: static
+            display: flex
+            flex-direction: column
+        margin: 0 100px
+        padding: 0 120px
+
+
+@media (max-width: 992px)
+    .ellipse
+        top: 8vw
+        left: 15vw
+    .first-screen
+        flex-direction: column
+        margin: 0 80px
+        padding: 0 80px
+
+@media (max-width: 767px)
+    .ellipse
+        top: 70vh
+        left: 1vw
+    .first-screen
+        font-size: 7px
+        margin: 0 10px
+        padding-bottom: 0px
+        flex-direction: column
+        align-items: center
+        justify-content: center 
+        text-align: center
+        .img
+            width: 100%
+        article
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            .line
+                margin-top: 20px
+                position: static
+        .frame
+            display: block
+            img
+                position: relative
+                left: 3px
+            &__line
+                margin: 10px 0
+                position: static
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+            .first, .second
+                &__inner
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+
+
+//----------------second-screen----------------
+
+.second-screen
+    padding-top: 3vw
+    background-color: #fff  
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    margin-bottom: 126px
+    .items
+        display: flex
+        flex-direction: row
+        
+
+.models
+    .all
+        display: flex
+        justify-content: flex-end
+        font-weight: 500
+        font-size: 16px
+        line-height: 19px
+        text-decoration: underline #C4C0B6 2px
+        text-underline-offset: 11px  
+
+.items
+    margin-top: 38px
+    display: flex
+    justify-content: space-between
+
+.item
+    display: flex
+    flex-direction: column
+    &__name
+        text-transform: uppercase
+        font-weight: 700
+        font-size: 14px
+        line-height: 24px
+        letter-spacing: 0.03em
+    &__price
+        font-weight: 400
+        font-size: 12px
+        line-height: 16px
+        color: rgba(27, 26, 23, 0.82)
+    &__line
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: flex-start
+        .line
+            width: 30px
+            margin-right: 20px
+            height: 0px
+            border: 0.5px solid #8B8371
+    .link
+        font-weight: 400
+        font-size: 16px
+        line-height: 21px
+
+
+@media (max-width: 1200px)
+    .second-screen
+        margin-top: 10vw
+        padding: 0 120px
+
+@media (max-width: 992px)
+    .second-screen
+        padding: 0 80px
+
+@media (max-width: 767px)
+    .second-screen
+        margin-bottom: 40px
+        padding-bottom: 0px
+        flex-direction: column
+        align-items: center
+        justify-content: center 
+        text-align: center
+        h3
+            margin-bottom: 30px
+        .all
+            margin-bottom: 10px
+        .item
+            border: 1px solid $accent
+            margin: 10px 0
+            padding: 20px
+        .models, .items, .item__line, .item__line .line
+            margin:0
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center 
+            text-align: center
+
+        
+ 
+
+
+//----------------banner----------------
+
+.banner
+    background-color: $gray
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    margin: 0 10vw
+    &__images
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        width: 100%
+        height: 100%
+    .ellipse-border
+        background: linear-gradient($gray, $gray) padding-box, $gradient  border-box
+        position: absolute
+        &.first
+            transform: rotate(150deg)       
+            left: 90vw
+            width: 365px
+            height: 365px
+        &.second
+            transform: rotate(150deg)
+            left: 90vw
+            width: 744.38px
+            height: 744.38px
+            
+    
+
+.main__content
+    display: flex
+    flex-direction: row
+    
+    article
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: center
+        padding: 0 10vw
+        h3
+            white-space: nowrap
+            margin-bottom: 38px
+        p
+            font-weight: 400
+            font-size: 16px
+            line-height: 150%
+            margin-bottom: 45px
+        .btn
+            background-color: $accent
+
+.slider
+    position: relative
+    margin: 15px 0
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-end
+    &__btn
+        font-family: 'Prata', serif
+        margin: 0 10px
+        text-decoration: none
+        border: 0px solid black
+        background-color: rgba(0,0,0,0)
+    p
+        font-family: 'Prata', serif
+        font-weight: 400
+        font-size: 12px
+        line-height: 16px
+
+
+.arrow
+    cursor: pointer
+    border: solid #1B1A17
+    border-width: 0 1px 1px 0
+    display: inline-block
+    padding: 3px
+
+
+.right 
+    transform: rotate(-45deg)
+
+.left
+    transform: rotate(135deg)
+
+
+
+@media (max-width: 1200px)
+    .banner
+
+@media (max-width: 992px)
+    .banner
+
+        background-color: $gray
+        display: flex
+        flex-direction: column
+        article
+            align-items: center
+        margin: 0 10vw
+        &__images
+            min-width: 10vw
+            min-height: 10vh
+        .slider
+            position: static
+            display: flex
+            justify-content: center
+
+@media (max-width: 767px)
+    .banner
+        
+        padding: 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-align: center
+        .main__content
+            display: flex
+            flex-direction: column
+            justify-content: center
+        article
+            align-items: center
+            margin-bottom: 20px
+            h3
+                white-space: normal
+        .slider
+            position: static
+            justify-content: center
+
+
+//----------------third-screen----------------
+
+
+.third-screen
+    padding: 90px 5vw
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+
+.content__text
+    position: relative
+    bottom: 70px
+    margin: 0 70px
+    display: flex
+    flex-direction: column
+    align-items: start
+    justify-content: flex-end
+    article
+        display: flex
+        align-items: flex-start
+        flex-direction: column
+        justify-content: center
+    h3
+        font-size: 3.2em
+
+    p
+        max-width: 380px
+        margin-top: 15px
+        font-weight: 400
+        font-size: 1.6em
+        line-height: 27px
+
+    
+    .link__logo
+        margin: 9px
+    .logos
+        padding-top: 100px
+        position: relative
+
+
+.content__images
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    grid-template-rows: repeat(6, 5vw)
+    grid-gap: 5px
+    img
+        width: 100%
+        height: 100%    
+        object-fit: cover
+.item-1
+    grid-column-start: 1
+    grid-column-end: 3
+    grid-row-start: 1
+    grid-row-end: 4
+.item-2
+    grid-column-start: 1
+    grid-column-end: 3
+    grid-row-start: 4
+    grid-row-end: 7
+
+.item-3
+    grid-column-start: 3
+    grid-column-end: 6
+    grid-row-start: 1
+    grid-row-end: 7
+@media (max-width: 1200px)
+    .third-screen
+        .content__text
+            bottom: 10px
+@media (max-width: 992px)
+    .third-screen
+        bottom: 30px
+@media (max-width: 767px)
+    .third-screen
+        flex-direction: column
+
+
+//-----------------footer-----------------
+
+
+.footer
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    padding: 0 182px
+    color: white
+    min-height: 275px
+    background-color: $dark
+    .link
+        color: rgba(255, 255, 255, 0.75)
+        &__logo
+            color: #fff
+
+    &__logo
+        display: flex
+        flex-direction: row
+        align-items: flex-end
+        text-transform: uppercase
+        font-weight: 400
+        font-size: 12px
+        line-height: 16px
+        letter-spacing: 0.14em
+
+    ul
+        margin-top: 33px
+        list-style: none
+    li
+        margin-bottom: 6px
+    &__text
+        margin-top: 79px
+        font-weight: 700
+        font-size: 14px
+        line-height: 16px
+
+    &__info
+        display: flex
+        flex-direction: column
+
+
+@media (max-width: 1200px)
+    .footer
+        padding: 0 120px
+
+@media (max-width: 992px)
+    .footer
+        padding: 0 80px
+
+@media (max-width: 767px)
+    .footer
+        padding-bottom: 0px
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-align: center
+        &__text
+            margin-top: 30px
+        ul
+            margin-top: 10px
+        
